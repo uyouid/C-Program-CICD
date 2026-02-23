@@ -13,10 +13,8 @@ TEST_DIR := test
 BUILD_DIR := build
 BIN_DIR := bin
 
-EXT := .bin
-
-APP := $(BIN_DIR)/app$(EXT)
-TEST := $(BIN_DIR)/test_runner$(EXT)
+APP := $(BIN_DIR)/app
+TEST := $(BIN_DIR)/test_runner
 
 # ===== ソース =====
 SRC_C := $(wildcard $(SRC_DIR)/*.c)
