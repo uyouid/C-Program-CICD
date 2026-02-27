@@ -2,8 +2,8 @@
 CC := gcc
 CXX := g++
 
-CFLAGS := -Wall -Wextra -Werror -I./src
-CXXFLAGS := -Wall -Wextra -Werror -I./src
+CFLAGS := -Wall -Wextra -Werror -I./src -g -O0
+CXXFLAGS := -Wall -Wextra -Werror -I./src -g -O0
 
 # CppUTest
 LDLIBS := -lCppUTest -lCppUTestExt
@@ -14,7 +14,7 @@ BUILD_DIR := build
 BIN_DIR := bin
 
 APP := $(BIN_DIR)/app
-TEST := $(BIN_DIR)/test_runner
+TEST := $(BIN_DIR)/test
 
 # ===== ソース =====
 SRC_C := $(wildcard $(SRC_DIR)/*.c)
@@ -78,4 +78,4 @@ CXXFLAGS += -MMD -MP
 -include $(APP_OBJS:.o=.d)
 -include $(TEST_OBJS:.o=.d)
 
-.PHONY: all test clean rebuild format
+.PHONY: all test format clean rebuild
