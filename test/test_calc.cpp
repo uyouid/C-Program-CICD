@@ -9,3 +9,6 @@ TEST_GROUP(CalcGroup){
 };
 
 TEST(CalcGroup, AddTest) { CHECK_EQUAL(5, add(2, 3)); }
+
+TEST(CalcGroup, MinusTest1) { CHECK_EQUAL(-1, minus(2, 3)); }
+TEST(CalcGroup, MinusTest2) { CHECK_EQUAL(2, minus(5, 3)); }
